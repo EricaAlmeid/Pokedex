@@ -27,7 +27,7 @@ quadro_pokemon = Frame(janela, width=500, height=290, relief='flat')
 quadro_pokemon.grid(row=1, column=0)
 
 ### nome ####
-pok_nome = Label(quadro_pokemon, text='Jigglipuff', relief='flat', anchor=CENTER, font=('Fixedsys 20'), bg=co1, fg=co0)
+pok_nome = Label(quadro_pokemon, text='Jigglypuff', relief='flat', anchor=CENTER, font=('Fixedsys 20'), bg=co1, fg=co0)
 pok_nome.place(x=12, y=15)
 
 ### Categoria ###
@@ -89,6 +89,62 @@ pok_CC.place(x=195, y=360)
 
 pok_comptt = Label(janela, text='Competitive', relief='flat', anchor=CENTER, font=('Arial 10'), bg=co1, fg=co4)
 pok_comptt.place(x=195, y=385)
+
+### Botao 1 ###
+
+imagem_pok_1 = Image.open('images/cabeca_jigglypuff.png')
+imagem_pok_1 = imagem_pok_1.resize((40, 40))
+imagem_pok_1 = ImageTk.PhotoImage(imagem_pok_1)
+
+b_pok_1 = Button(janela, image=imagem_pok_1, text='JigglyPuff', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW,  padx=5, font=('Arial 12'), bg=co1, fg=co0)
+b_pok_1.place(x=375, y=10)
+
+### Botao 2 ###
+
+imagem_pok_2 = Image.open('images/cabeca_jigglypuff.png')
+imagem_pok_2 = imagem_pok_2.resize((40, 40))
+imagem_pok_2 = ImageTk.PhotoImage(imagem_pok_2)
+
+b_pok_2 = Button(janela, image=imagem_pok_2, text='JigglyPuff', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW,  padx=5, font=('Arial 12'), bg=co1, fg=co0)
+b_pok_2.place(x=375, y=10)
+
+
+### Botao 3 ###
+
+imagem_pok_3 = Image.open('images/cabeca_jigglypuff.png')
+imagem_pok_3 = imagem_pok_3.resize((40, 40))
+imagem_pok_3 = ImageTk.PhotoImage(imagem_pok_3)
+
+b_pok_3 = Button(janela, image=imagem_pok_3, text='JigglyPuff', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW,  padx=5, font=('Arial 12'), bg=co1, fg=co0)
+b_pok_3.place(x=375, y=10)
+
+### Botao 4 ###
+
+imagem_pok_4 = Image.open('images/cabeca_jigglypuff.png')
+imagem_pok_4 = imagem_pok_4.resize((40, 40))
+imagem_pok_4 = ImageTk.PhotoImage(imagem_pok_4)
+
+b_pok_4 = Button(janela, image=imagem_pok_4, text='JigglyPuff', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW,  padx=5, font=('Arial 12'), bg=co1, fg=co0)
+b_pok_4.place(x=375, y=10)
+
+
+### Botao 5 ###
+
+imagem_pok_5 = Image.open('images/cabeca_jigglypuff.png')
+imagem_pok_5 = imagem_pok_5.resize((40, 40))
+imagem_pok_5 = ImageTk.PhotoImage(imagem_pok_5)
+
+b_pok_5 = Button(janela, image=imagem_pok_5, text='JigglyPuff', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW,  padx=5, font=('Arial 12'), bg=co1, fg=co0)
+b_pok_5.place(x=375, y=10)
+
+### Botao 6 ###
+
+imagem_pok_6 = Image.open('images/cabeca_jigglypuff.png')
+imagem_pok_6 = imagem_pok_6.resize((40, 40))
+imagem_pok_6 = ImageTk.PhotoImage(imagem_pok_6)
+
+b_pok_6 = Button(janela, image=imagem_pok_6, text='JigglyPuff', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW,  padx=5, font=('Arial 12'), bg=co1, fg=co0)
+b_pok_6.place(x=375, y=10)
 
 
 janela.mainloop()
