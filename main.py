@@ -33,35 +33,46 @@ quadro_pokemon.grid(row=1, column=0)
 def trocar_pokemon(i):
     global imagem_pokemon, pok_imegem
 
+    ## Trocando a cor do fundo do pokemon ##
+
+    quadro_pokemon['bg'] = pokemon[i]['tipo'][3]
+
     ##tipo de pokemon##
     pok_nome['text'] = i
+    pok_nome['bg'] = pokemon[i]['tipo'][3]
     pok_tipo['text'] = pokemon[i]['tipo'][1]
-    pok_identificacao['text']=pokemon[i]['tipo'][0]
+    pok_tipo['bg'] = pokemon[i]['tipo'][3]
+    pok_identificacao['text'] = pokemon[i]['tipo'][0]
+    pok_identificacao['bg'] = pokemon[i]['tipo'][3]
+
+    imagem_pokemon = pokemon[i]['tipo'][2]
+
+    ### imagem do Pokemon ###
+    imagem_pokemon = Image.open(imagem_pokemon)
+    imagem_pokemon = imagem_pokemon.resize((238, 238))
+    imagem_pokemon = ImageTk.PhotoImage(imagem_pokemon)
+
+    pok_imegem = Label(quadro_pokemon, image=imagem_pokemon, relief='flat', bg=pokemon[i]['tipo'][3], fg=co1)
+    pok_imegem.place(x=60, y=50)
+
+    pok_tipo.lift()
 
 
 
 ### nome ####
-pok_nome = Label(quadro_pokemon, text='Jigglypuff', relief='flat', anchor=CENTER, font=('Fixedsys 20'), bg=co1, fg=co0)
+pok_nome = Label(quadro_pokemon, text='', relief='flat', anchor=CENTER, font=('Fixedsys 20'),  fg=co1)
 pok_nome.place(x=12, y=15)
 
 ### Categoria ###
-pok_tipo = Label(quadro_pokemon, text='Balão', relief='flat', anchor=CENTER, font=('Ivy 10 bold'), bg=co1, fg=co0)
+pok_tipo = Label(quadro_pokemon, text='', relief='flat', anchor=CENTER, font=('Ivy 10 bold'), bg=co1, fg=co1)
 pok_tipo.place(x=12, y=50)
 
 ### Identificação ###
-pok_identificacao = Label(quadro_pokemon, text='#039', relief='flat', anchor=CENTER, font=('Ivy 10 bold'), bg=co1,
-                          fg=co0)
+pok_identificacao = Label(quadro_pokemon, text='', relief='flat', anchor=CENTER, font=('Ivy 10 bold'), bg=co1, fg=co1)
+
 pok_identificacao.place(x=12, y=75)
 
-### imagem do Pokemon ###
-imagem_pokemon = Image.open('images/jigglypuff.png')
-imagem_pokemon = imagem_pokemon.resize((238, 238))
-imagem_pokemon = ImageTk.PhotoImage(imagem_pokemon)
 
-pok_imegem = Label(quadro_pokemon, image=imagem_pokemon, relief='flat', bg=co1, fg=co0)
-pok_imegem.place(x=60, y=50)
-
-pok_tipo.lift()
 
 ### Status ###
 pok_status = Label(janela, text='Status', relief='flat', anchor=CENTER, font=('Arial 20'), bg=co1, fg=co0)
@@ -166,8 +177,17 @@ imagem_pok_7 = Image.open('images/cabeca-dragonite.png')
 imagem_pok_7 = imagem_pok_7.resize((40, 40))
 imagem_pok_7 = ImageTk.PhotoImage(imagem_pok_7)
 
-b_pok_6 = Button(janela, command=lambda: trocar_pokemon('Dragonite'), image=imagem_pok_7, text='Dragonnite', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW,  padx=5, font=('Arial 12'), bg=co1, fg=co0)
+b_pok_6 = Button(janela, command=lambda: trocar_pokemon('Dragonite'), image=imagem_pok_7, text='Dragonite', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW,  padx=5, font=('Arial 12'), bg=co1, fg=co0)
 b_pok_6.place(x=375, y=340)
 
+
+import random
+Lista_pokemons = ['Gengar', 'JigglyPuff', 'Gyarados', 'Charmander', 'Bulbasaur', 'Pikachu']
+
+pokemon_escolhido = random.sample(Lista_pokemons, 1)
+
+print(pokemon_escolhido[0])
+
+trocar_pokemon(pokemon_escolhido[0])
 
 janela.mainloop()
