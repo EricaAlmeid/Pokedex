@@ -57,6 +57,17 @@ def trocar_pokemon(i):
 
     pok_tipo.lift()
 
+    ## Status do pokemon ##
+    pok_hp['text'] = pokemon[i]['status'][0]
+    pok_attack ['text'] = pokemon[i]['status'][1]
+    pok_defesa ['text'] = pokemon[i]['status'][2]
+    pok_velocidade['text'] = pokemon[i]['status'][3]
+    pok_total['text'] = pokemon[i]['status'][4]
+
+    ## Habilidades do pokemon##
+    pok_hb_1['text'] = pokemon[i]['habilidades'][0]
+    pok_hb_2['text'] = pokemon[i]['habilidades'][1]
+
 
 
 ### nome ####
@@ -107,13 +118,13 @@ pok_habilidade = Label(janela, text='Habilidade', relief='flat', anchor=CENTER, 
 pok_habilidade.place(x=180, y=310)
 
 ### habilidade cute charme ###
-pok_CC = Label(janela, text='Cute Charm', relief='flat', anchor=CENTER, font=('Arial 10'), bg=co1, fg=co4)
-pok_CC.place(x=195, y=360)
+pok_hb_1 = Label(janela, text='Cute Charm', relief='flat', anchor=CENTER, font=('Arial 10'), bg=co1, fg=co4)
+pok_hb_1.place(x=195, y=360)
 
 ### habilidade competitive ###
 
-pok_comptt = Label(janela, text='Competitive', relief='flat', anchor=CENTER, font=('Arial 10'), bg=co1, fg=co4)
-pok_comptt.place(x=195, y=385)
+pok_hb_2 = Label(janela, text='Competitive', relief='flat', anchor=CENTER, font=('Arial 10'), bg=co1, fg=co4)
+pok_hb_2.place(x=195, y=385)
 
 ### Botao 1 ###
 
@@ -181,12 +192,12 @@ b_pok_6 = Button(janela, command=lambda: trocar_pokemon('Dragonite'), image=imag
 b_pok_6.place(x=375, y=340)
 
 
+
+
 import random
 Lista_pokemons = ['Gengar', 'JigglyPuff', 'Gyarados', 'Charmander', 'Bulbasaur', 'Pikachu']
-
 pokemon_escolhido = random.sample(Lista_pokemons, 1)
 
-print(pokemon_escolhido[0])
 
 trocar_pokemon(pokemon_escolhido[0])
 
