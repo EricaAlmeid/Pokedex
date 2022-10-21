@@ -188,14 +188,22 @@ imagem_pok_7 = Image.open('images/cabeca-dragonite.png')
 imagem_pok_7 = imagem_pok_7.resize((40, 40))
 imagem_pok_7 = ImageTk.PhotoImage(imagem_pok_7)
 
-b_pok_6 = Button(janela, command=lambda: trocar_pokemon('Dragonite'), image=imagem_pok_7, text='Dragonite', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW,  padx=5, font=('Arial 12'), bg=co1, fg=co0)
-b_pok_6.place(x=375, y=340)
+b_pok_7 = Button(janela, command=lambda: trocar_pokemon('Dragonite'), image=imagem_pok_7, text='Dragonite', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW,  padx=5, font=('Arial 12'), bg=co1, fg=co0)
+b_pok_7.place(x=375, y=340)
 
+### Botao 8 ###
+
+imagem_pok_8 = Image.open('images/cabeca-charizard.png')
+imagem_pok_8 = imagem_pok_8.resize((40, 40))
+imagem_pok_8 = ImageTk.PhotoImage(imagem_pok_8)
+
+b_pok_8 = Button(janela, command=lambda: trocar_pokemon('Charizard'), image=imagem_pok_8, text='Charizard', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW,  padx=5, font=('Arial 12'), bg=co1, fg=co0)
+b_pok_8.place(x=375, y=395)
 
 
 
 import random
-Lista_pokemons = ['Gengar', 'JigglyPuff', 'Gyarados', 'Charmander', 'Bulbasaur', 'Pikachu']
+Lista_pokemons = ['Gengar', 'JigglyPuff', 'Gyarados', 'Charmander', 'Bulbasaur', 'Pikachu', 'Charizard']
 pokemon_escolhido = random.sample(Lista_pokemons, 1)
 
 

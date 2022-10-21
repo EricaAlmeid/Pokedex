@@ -1,4 +1,3 @@
-
 pokemon = {
     'JigglyPuff': {
         "status": ['HP: 115', 'Ataque: 45', 'Defesa: 20', 'Velocidade: 20', 'Total: 180'],
@@ -49,6 +48,14 @@ pokemon = {
 
 
     },
+
+    'Charizard': {
+        "status": ['HP: 78', 'Ataque: 84', 'Defesa: 78', 'Velocidade: 100', 'Total: 340'],
+        "habilidades": ['Chama', 'Solar'],
+        "tipo": ['#006', 'Flamejante', 'images/charizard.png', '#B8860B'],
+    },
+
+
 
 
 }
