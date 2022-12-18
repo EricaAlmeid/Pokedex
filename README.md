@@ -1,2 +1,3 @@
-# Pokedex
- Pokedex para seber informações de diferentes especies de Pokemons e suas evoluções
+#  (◍ㅇᆽㅇ◍) Pokedex
+
+[![ NPM ](https://img.shields.io/npm/l/react)](https://github.com/EricaAlmeid/Pokedex/blob/main/LICENSE)
